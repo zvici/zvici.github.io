@@ -1,0 +1,36 @@
+{
+  "name": "my-project",
+  "version": "0.0.0",
+  "scripts": {
+    "serve": "vite preview",
+    "build": "vite build",
+    "lint": "vue-cli-service lint",
+    "dev": "vite"
+  },
+  "dependencies": {
+    "vue": "^3.0.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.2.2",
+    "@vue/cli-plugin-eslint": "^4.5.13",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@vue/eslint-config-airbnb": "^5.0.2",
+    "autoprefixer": "^10.2.5",
+    "eslint": "^6.7.2",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "lint-staged": "^9.5.0",
+    "postcss": "^8.2.15",
+    "tailwindcss": "^2.1.2",
+    "vite": "^2.3.0"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}
